@@ -33,9 +33,18 @@ router.post('/save', isAuth, async (req, res) => {
       tp.solved = p.solved;
     }
   });
+  
   if (entries.length) user.logs.push({ date: new Date(), entries });
+
+  let x = [];
+  for (let i = user.logs.length - entries.length; i < user.logs.length; i++) {
+    const log = user.logs[i];
+    if (log.date.toISOString().split('T')[0] === new Date().toISOString().split('T')[0]) {
+      x.push(log);
+    }
+  }
   await user.save();
-  res.json({ progress: user.progress, logs: user.logs });
+  res.json({ progress: user.progress, logs: x });
 });
 
 router.post('/update-logs', isAuth, async (req, res) => {
@@ -50,7 +59,7 @@ router.post('/update-logs', isAuth, async (req, res) => {
     user.totalActiveDays += 1;
     user.lastUpdate = new Date();
   }
-  user.logs = edited.map(l => ({ date: new Date(l.date || Date.now()), entries: l.entries }));
+  // user.logs = edited.map(l => ({ date: new Date(l.date || Date.now()), entries: l.entries }));
   await user.save();
   res.json({ success: true, totalActiveDays: user.totalActiveDays });
 });
