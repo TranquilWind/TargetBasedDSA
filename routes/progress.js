@@ -35,6 +35,7 @@ router.post('/save', isAuth, async (req, res) => {
   });
   
   if (entries.length) user.logs.push({ date: new Date(), entries });
+  await user.save();
 
   let x = [];
   for (let i = user.logs.length - entries.length; i < user.logs.length; i++) {
@@ -43,7 +44,6 @@ router.post('/save', isAuth, async (req, res) => {
       x.push(log);
     }
   }
-  await user.save();
   res.json({ progress: user.progress, logs: x });
 });
 
