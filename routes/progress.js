@@ -39,6 +39,7 @@ router.post('/save', isAuth, async (req, res) => {
 
   let x = [];
   for (let i = user.logs.length - entries.length; i < user.logs.length; i++) {
+    console.log('log', user.logs[i], 'i', i, 'all', user.logs.length, 'entries', entries.length);
     const log = user.logs[i];
     if (log.date.toISOString().split('T')[0] === new Date().toISOString().split('T')[0]) {
       x.push(log);
