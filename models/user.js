@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const topicList = [
-  'Basics', 'Sorting', 'Arrays', 'Strings', 'Binary Search', 'LinkedList', 'Stack','Queue',
+  'Basics', 'Sorting', 'Arrays', 'Strings', 'Binary Search', 'LinkedList',
   'Recursion', 'Bit Manipulation', 'Sliding Window & Two Pointer',
   'Greedy Algorithm', 'Binary Trees', 'Graphs', 'Dynamic Programming',
   'Tries', 'Heaps', 'Math', 'Stack', 'Queue'
