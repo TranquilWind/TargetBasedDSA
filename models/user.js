@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const topicList = [
-  'Basics', 'Sorting', 'Arrays', 'Strings', 'Binary Search', 'LinkedList',
+  'Basics', 'Sorting', 'Arrays', 'Strings', 'Binary Search', 'LinkedList', 'Stack','Queue',
   'Recursion', 'Bit Manipulation', 'Sliding Window & Two Pointer',
   'Greedy Algorithm', 'Binary Trees', 'Graphs', 'Dynamic Programming',
-  'Tries', 'Heaps', 'Math'
+  'Tries', 'Heaps', 'Math', 'Stack', 'Queue'
 ];
 
 const progressSchema = new mongoose.Schema({
