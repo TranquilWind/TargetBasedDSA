@@ -1,35 +1,35 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Profile Setup - DSA Tracker</title>
-</head>
-<body>
-  <div class="auth-container">
-    <div class="header">
-      <h1>DSA Tracker</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Profile Setup - DSA Tracker</title>
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="header">
+        <h1>DSA Tracker</h1>
+      </div>
+      <div class="form-container">
+        <h2>Profile Setup</h2>
+        <form action="/profile_setup" method="post">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" name="startDate" required />
+          </div>
+          <div class="form-group">
+            <label for="target">Target Number of Questions</label>
+            <input type="number" id="target" name="target" required min="1" />
+          </div>
+          <button type="submit" class="btn-primary">Save Profile</button>
+        </form>
+      </div>
     </div>
-    <div class="form-container">
-      <h2>Profile Setup</h2>
-      <form action="/profile_setup" method="post">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="startDate">Start Date</label>
-          <input type="date" id="startDate" name="startDate" required>
-        </div>
-        <div class="form-group">
-          <label for="target">Target Number of Questions</label>
-          <input type="number" id="target" name="target" required min="1">
-        </div>
-        <button type="submit" class="btn-primary">Save Profile</button>
-      </form>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
+
