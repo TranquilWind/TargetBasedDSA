@@ -22,13 +22,14 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI })
+    store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI }),
   })
 );
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.error(err));
+  .catch((err) => console.error(err));
 
 app.use('/', authRoutes);
 app.use('/progress', progressRoutes);
