@@ -1,86 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Daily Logs - DSA Tracker</title>
-  <style>
-    .logs-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    .date-header {
-      background-color: #000;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 6px;
-      margin-top: 30px;
-      margin-bottom: 15px;
-      font-size: 1.4rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    
-    .user-card {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.07);
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
-    
-    .user-header {
-      background-color: #f5f5f5;
-      padding: 12px 18px;
-      font-weight: 600;
-      font-size: 1.2rem;
-      color: #333;
-      border-bottom: 1px solid #eee;
-    }
-    
-    .log-list {
-      list-style-type: none;
-      padding: 15px 20px;
-    }
-    
-    .log-item {
-      padding: 8px 0;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    
-    .log-item:last-child {
-      border-bottom: none;
-    }
-    
-    .no-logs {
-      text-align: center;
-      padding: 40px;
-      color: #777;
-      font-size: 1.1rem;
-    }
-    
-    .day-separator {
-      height: 1px;
-      background-color: #ddd;
-      margin: 40px 0;
-    }
-  </style>
-</head>
-<body>
-  <div class="header">
-    <h1>DSA Tracker</h1>
-  </div>
-  
-  <h1 class="page-title">Daily Logs</h1>
-  <p class="table-subtitle">Track everyone's daily progress</p>
-  
-  <div class="logs-container" id="logs-container">
-    <!-- Logs will be dynamically inserted here -->
-    <div class="no-logs" id="no-logs">Loading logs...</div>
-  </div>
-  
-  <script src="/js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Daily Logs - DSA Tracker</title>
+    <style>
+      .logs-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .date-header {
+        background-color: #000;
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 6px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .user-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+
+      .user-header {
+        background-color: #f5f5f5;
+        padding: 12px 18px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #333;
+        border-bottom: 1px solid #eee;
+      }
+
+      .log-list {
+        list-style-type: none;
+        padding: 15px 20px;
+      }
+
+      .log-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .log-item:last-child {
+        border-bottom: none;
+      }
+
+      .no-logs {
+        text-align: center;
+        padding: 40px;
+        color: #777;
+        font-size: 1.1rem;
+      }
+
+      .day-separator {
+        height: 1px;
+        background-color: #ddd;
+        margin: 40px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>DSA Tracker</h1>
+    </div>
+
+    <h1 class="page-title">Daily Logs</h1>
+    <p class="table-subtitle">Track everyone's daily progress</p>
+
+    <div class="logs-container" id="logs-container">
+      <!-- Logs will be dynamically inserted here -->
+      <div class="no-logs" id="no-logs">Loading logs...</div>
+    </div>
+
+    <script src="/js/main.js"></script>
+  </body>
 </html>
+
